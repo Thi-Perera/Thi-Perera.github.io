@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box; /* Imposta il box-sizing per includere il padding e il bordo nel calcolo della larghezza */
+    margin: 0; /* Imposta il margine a 0 */
+    padding: 0; /* Imposta il padding a 0 */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', /* Imposta la famiglia di font */
+    'Lucida Sans', Arial, sans-serif; /* Priorità della famiglia di font */
+}
+nav { /* Selettore per il tag di navigazione */
+    height: 80px; /* Imposta l'altezza a 80px */
+
+    display: flex; /* Abilita il layout flex */
+    justify-content: space-between; /* Distribuisce uniformemente gli elementi all'interno in orizzontale */
+    align-items: center; /* Allinea verticalmente al centro */
+    padding: 0rem calc((100vw - 1300px) / 2); /* Imposta il padding orizzontale */
+}
+.logo { /* Selettore per la classe 'logo' */
+    color: #000; /* Imposta il colore del testo */
+    font-size: 1.5rem; /* Imposta la dimensione del font */
+    font-weight: bold; /* Imposta il grassetto */
+    font-style: Helvetica; /* Imposta lo stile del font */
+    padding: 0 2rem; /* Imposta il padding orizzontale */
+}
+.logo em { /* Selettore per la classe 'logo' */
+    color: #000; /* Imposta il colore del testo */
+    font-size: 1.5rem; /* Imposta la dimensione del font */
+    font-weight: bold; /* Imposta il grassetto */
+    font-style: 'Red Hat Mono'; /* Imposta lo stile del font */
+}
+nav a { /* Selettore per gli elementi di ancoraggio all'interno della navigazione */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #000; /* Imposta il colore del testo */
+    padding: 0 1.5rem; /* Imposta il padding orizzontale */
+}
+nav a:hover { /* Selettore per gli elementi di ancoraggio al passaggio del mouse */
+    color: #333333333; /* Cambia il colore del testo */
+}
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-container { /* Selettore per l'elemento con classe 'hero-container' */
+    display: grid; /* Abilita il layout grid */
+    grid-template-columns: 1fr; /* Imposta una colonna flessibile */
+    height: 95vh; /* Imposta l'altezza al 95% dell'altezza della viewport */
+    padding: 3rem calc((100vw - 1300px) / 2); /* Imposta il padding orizzontale */
+}
+.nav-items { /* Selettore per l'elemento con classe 'nav-items' */
+    float: right; /* Sposta gli elementi a destra */
+}
+.hero-box { /* Selettore per l'elemento con classe 'hero-box' */
+    display: flex; /* Abilita il layout flex */
+    flex-direction: row; /* Imposta la direzione dei figli in riga */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: flex-start; /* Allinea gli elementi all'inizio */
+    color: #000; /* Imposta il colore del testo */
+    padding: 0rem 2rem; /* Imposta il padding orizzontale */
+}
+.hero-box h1 { /* Selettore per l'elemento 'h1' all'interno di '.hero-box' */
+    margin-bottom: 1rem; /* Imposta il margine inferiore */
+    font-size: 3rem; /* Imposta la dimensione del font */
+}
+.hero-box p { /* Selettore per l'elemento 'p' all'interno di '.hero-box' */
+    margin-bottom: 2rem; /* Imposta il margine inferiore */
+    font-size: 1.5rem; /* Imposta la dimensione del font */
+    line-height: 1.5; /* Imposta l'altezza della riga */
+}
+.nav-items a { /* Selettore per gli elementi di ancoraggio all'interno di '.nav-items' */
+    color: #000; /* Imposta il colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    margin-left: 20px; /* Imposta il margine sinistro */
+}
+.hero h1 { /* Selettore per l'elemento 'h1' all'interno di '.hero' */
+    font-size: 3rem; /* Imposta la dimensione del font */
+    margin-bottom: 20px; /* Imposta il margine inferiore */
+}
+.hero p { /* Selettore per l'elemento 'p' all'interno di '.hero' */
+    font-size: 1.2rem; /* Imposta la dimensione del font */
+    margin-bottom: 40px; /* Imposta il margine inferiore */
+}
+.tricksword { /* Selettore per l'elemento con classe 'tricksword' */
+    -webkit-text-size-adjust: 100%; /* Imposta l'adattamento della dimensione del testo per i browser WebKit */
+    color: #000; /* Imposta il colore del testo */
+    letter-spacing: -4px; /* Imposta lo spaziamento delle lettere */
+    font-family: Messina Sans, sans-serif; /* Imposta la famiglia di font */
+    font-size: 5rem; /* Imposta la dimensione del font */
+    font-style: normal; /* Imposta lo stile del font */
+    font-weight: 400; /* Imposta il peso del font */
+    line-height: 5rem; /* Imposta l'altezza della riga */
+    text-align: left; /* Imposta l'allineamento del testo */
+    box-sizing: border-box; /* Imposta il box-sizing */
+    white-space: nowrap; /* Impedisce il riavvolgimento del testo */
+}
+
+.letter {
+    -webkit-text-size-adjust: 100%;
+    font: 112.5%/1.45em georgia,serif,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    font-feature-settings: "kern","liga","clig","calt";
+    color: #000;
+    font-family: 'Be Vietnam Pro',sans-serif;
+    font-kerning: normal;
+    text-align: left;
+    box-sizing: inherit;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.05em;
+    display: block;
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 768px) { /* Media query per schermi con larghezza massima di 768px */
+    .hero-container { /* Selettore per l'elemento con classe 'hero-container' */
+        grid-template-columns: 1fr; /* Imposta una colonna flessibile nel grid layout */
+    }
+}

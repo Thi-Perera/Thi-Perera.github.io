@@ -5,14 +5,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', /* Imposta la famiglia di font */
     'Lucida Sans', Arial, sans-serif; /* Priorità della famiglia di font */
 }
-nav { /* Selettore per il tag di navigazione */
-    height: 80px; /* Imposta l'altezza a 80px */
-
-    display: flex; /* Abilita il layout flex */
-    justify-content: space-between; /* Distribuisce uniformemente gli elementi all'interno in orizzontale */
-    align-items: center; /* Allinea verticalmente al centro */
-    padding: 0rem calc((100vw - 1300px) / 2); /* Imposta il padding orizzontale */
-}
 .logo { /* Selettore per la classe 'logo' */
     color: #000; /* Imposta il colore del testo */
     font-size: 1.5rem; /* Imposta la dimensione del font */
@@ -26,11 +18,7 @@ nav { /* Selettore per il tag di navigazione */
     font-weight: bold; /* Imposta il grassetto */
     font-style: 'Red Hat Mono'; /* Imposta lo stile del font */
 }
-nav a { /* Selettore per gli elementi di ancoraggio all'interno della navigazione */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: #000; /* Imposta il colore del testo */
-    padding: 0 1.5rem; /* Imposta il padding orizzontale */
-}
+
 nav a:hover { /* Selettore per gli elementi di ancoraggio al passaggio del mouse */
     color: #333333333; /* Cambia il colore del testo */
 }
@@ -45,9 +33,7 @@ nav a:hover { /* Selettore per gli elementi di ancoraggio al passaggio del mouse
     height: 95vh; /* Imposta l'altezza al 95% dell'altezza della viewport */
     padding: 3rem calc((100vw - 1300px) / 2); /* Imposta il padding orizzontale */
 }
-.nav-items { /* Selettore per l'elemento con classe 'nav-items' */
-    float: right; /* Sposta gli elementi a destra */
-}
+
 .hero-box { /* Selettore per l'elemento con classe 'hero-box' */
     display: flex; /* Abilita il layout flex */
     flex-direction: row; /* Imposta la direzione dei figli in riga */
@@ -64,11 +50,6 @@ nav a:hover { /* Selettore per gli elementi di ancoraggio al passaggio del mouse
     margin-bottom: 2rem; /* Imposta il margine inferiore */
     font-size: 1.5rem; /* Imposta la dimensione del font */
     line-height: 1.5; /* Imposta l'altezza della riga */
-}
-.nav-items a { /* Selettore per gli elementi di ancoraggio all'interno di '.nav-items' */
-    color: #000; /* Imposta il colore del testo */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    margin-left: 20px; /* Imposta il margine sinistro */
 }
 .hero h1 { /* Selettore per l'elemento 'h1' all'interno di '.hero' */
     font-size: 3rem; /* Imposta la dimensione del font */
@@ -115,3 +96,70 @@ nav a:hover { /* Selettore per gli elementi di ancoraggio al passaggio del mouse
         grid-template-columns: 1fr; /* Imposta una colonna flessibile nel grid layout */
     }
 }
+
+/* Stili di base per la navbar */
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+    background-color: #ffffff; /* Colore di sfondo della navbar */
+}
+
+.nav-items {
+    display: flex; /* Allinea gli elementi in orizzontale */
+    justify-content: flex-end; /* Posiziona gli elementi a destra */
+    align-items: center;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 1.5rem;
+    transition: color 0.3s ease;
+    font-size: 2rem;
+}
+
+.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Stili per hover sui link */
+nav a:hover {
+    color: #555;
+}
+
+/* Media queries per rendere la navbar responsive */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap; /* Permette di adattare il layout */
+        height: auto; /* Imposta l'altezza della navbar in base al contenuto */
+    }
+
+    .nav-items {
+        width: 100%; /* Prende tutto lo spazio disponibile */
+        justify-content: space-around; /* Spazia uniformemente gli elementi */
+        margin-top: 10px; /* Aggiunge un po' di spazio sopra */
+    }
+
+    .nav-items a {
+        padding: 10px; /* Riduce il padding */
+        font-size: 1.3rem; /* Riduce la dimensione del testo */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-items {
+        flex-direction: column; /* Disposizione verticale sui dispositivi più piccoli */
+        align-items: center; /* Allinea gli elementi al centro */
+    }
+
+    .nav-items a {
+        padding: 8px 0; /* Riduce il padding tra i link */
+        font-size: 0.8rem; /* Riduce ulteriormente la dimensione del testo */
+    }
+}
+
